@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public Rigidbody2D rb2D;
+    private Rigidbody2D rb2D;
     public float characterSpeed = 5f;
     void Start()
     {
@@ -34,31 +34,24 @@ public class PlayerController : MonoBehaviour
         {
             isJumping = true;
             jumpTimeCounter = jumpTime;
-            rb2D.velocity = Vector2.up * jumpForce;
+            rb2D.velocity = new Vector2( rb2D.velocity.x, jumpForce);
         }
 
         if (Input.GetKey(KeyCode.Space) && isJumping == true)
         {
             if (jumpTimeCounter>0)
             {
-                rb2D.velocity = Vector2.up * jumpForce;
+                rb2D.velocity = new Vector2( rb2D.velocity.x, jumpForce);
                 jumpTimeCounter -= Time.deltaTime;
             }
             else
             {
                 isJumping = false;
             }
-            
-            
         }
         if (Input.GetKeyUp(KeyCode.Space))
         {
             isJumping = false;
         }
     }
-    
-
-    
-    
-
 }
