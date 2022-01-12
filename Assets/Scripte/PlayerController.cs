@@ -5,20 +5,28 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    //HP Variablen
+
+    public int maxHealth = 5;
+    private int currentHealth;
+    
+    //Movement Variablen
     private Rigidbody2D rb2D;
     public float characterSpeed = 5f;
+    
+    
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
+        currentHealth = maxHealth;
     } 
     
+    //Movement Variablen
     public float jumpForce;
-     
     private bool isGrounded;
     public Transform feetPosition;
     public float checkRadius;
     public LayerMask whatIsGround;
-
     private float jumpTimeCounter;
     public float jumpTime;
     private bool isJumping;
@@ -53,5 +61,29 @@ public class PlayerController : MonoBehaviour
         {
             isJumping = false;
         }
+    }
+    
+    //Taking Damage
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        Debug.Log("current hp: "+currentHealth);
+        //play taking damage animation
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        Debug.Log("YOU DIED");
+        //play death animation
+        
+        Destroy(gameObject);
+        
+        //TODO: restart game/ gameover screen 
+        
     }
 }

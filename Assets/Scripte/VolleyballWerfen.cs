@@ -7,13 +7,20 @@ public class VolleyballWerfen : MonoBehaviour
 
     public Transform firePosition;
     public GameObject volleyballPrefab;
+
+    public float throwRate = 2.5f;
+    private float nextThrowTime = 0f;   
     
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Time.time >= nextThrowTime)
         {
-            Shoot();
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                Shoot();
+                nextThrowTime = Time.time + 1f / throwRate;
+            }
         }
     }
 
