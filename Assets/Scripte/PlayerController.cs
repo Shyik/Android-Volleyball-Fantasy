@@ -10,32 +10,32 @@ public class PlayerController : MonoBehaviour
     [Header("Events")]
     [Space]
 
+    /*
     public UnityEvent OnLandEvent;
 
     [System.Serializable]
     public class BoolEvent : UnityEvent<bool> { }
-    
+    */
     
     //HP
     public int maxHealth = 5;
     public int currentHealth;
-    
-    //Movement(1)
+   
+    //Animation
+        public Animator animator;
+        
+        void Start()
+        {
+            rb2D = GetComponent<Rigidbody2D>();
+            currentHealth = maxHealth;
+        } 
+        
+    //Movement
     private Rigidbody2D rb2D;
     public float characterSpeed = 5f;
     
-    //Animation
-    public Animator animator;
-    
-    void Start()
-    {
-        rb2D = GetComponent<Rigidbody2D>();
-        currentHealth = maxHealth;
-    } 
-    
-    //Movement(2) 
     public float jumpForce;
-    private bool isGrounded;
+    public bool isGrounded;
     public Transform feetPosition;
     public float checkRadius;
     public LayerMask whatIsGround;
@@ -75,13 +75,19 @@ public class PlayerController : MonoBehaviour
         }
         
         //Animation
-        animator.SetBool("IsJumping", false);
+        animator.SetBool("IsJumping", true);
+
+        if (isGrounded == false)
+        {
+            animator.SetBool("IsJumping", false);
+        }
     }
 
-    public void OnLanding()
+    
+    /*public void OnLanding()
     {
         animator.SetBool("IsJumping", false);
-    }
+    }*/
     
     
     //Taking Damage
