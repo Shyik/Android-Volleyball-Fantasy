@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
         }
         
         //Animation
-        animator.SetBool("IsJumping", true);
+        animator.SetBool("IsJumping", false);
     }
 
     public void OnLanding()

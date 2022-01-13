@@ -9,7 +9,12 @@ public class CollisionController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Obstacle") == true)
+        if (collision.gameObject.CompareTag("Obstacle" /*|| "Enemy"*/) == true)
+        {
+            Debug.Log("collided with: "+collision.name);
+            GetComponent<PlayerController>().TakeDamage(obstacleDamage);
+        }
+        if (collision.gameObject.CompareTag(/*"Obstacle" || */"Enemy") == true)
         {
             Debug.Log("collided with: "+collision.name);
             GetComponent<PlayerController>().TakeDamage(obstacleDamage);
