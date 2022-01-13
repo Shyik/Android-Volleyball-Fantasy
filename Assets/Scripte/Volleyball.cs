@@ -17,6 +17,9 @@ public class Volleyball : MonoBehaviour
     void Update()
     {
         rb2D.velocity = new Vector2(ballSpeed, 0);
+        
+        //destroys volleyball after a certain amount of time if it doesnt hit anything
+        Destroy(gameObject, 10f);
     }
 
     void OnTriggerEnter2D(Collider2D otherCollider2D)

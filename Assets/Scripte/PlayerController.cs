@@ -2,18 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerController : MonoBehaviour
 {
-    //HP Variablen
-
-    public int maxHealth = 5;
-    private int currentHealth;
     
-    //Movement Variablen
+    [Header("Events")]
+    [Space]
+
+    public UnityEvent OnLandEvent;
+
+    [System.Serializable]
+    public class BoolEvent : UnityEvent<bool> { }
+    
+    
+    //HP
+    public int maxHealth = 5;
+    public int currentHealth;
+    
+    //Movement(1)
     private Rigidbody2D rb2D;
     public float characterSpeed = 5f;
     
+    //Animation
+    public Animator animator;
     
     void Start()
     {
@@ -21,7 +33,7 @@ public class PlayerController : MonoBehaviour
         currentHealth = maxHealth;
     } 
     
-    //Movement Variablen
+    //Movement(2) 
     public float jumpForce;
     private bool isGrounded;
     public Transform feetPosition;
@@ -61,7 +73,16 @@ public class PlayerController : MonoBehaviour
         {
             isJumping = false;
         }
+        
+        //Animation
+        animator.SetBool("IsJumping", true);
     }
+
+    public void OnLanding()
+    {
+        animator.SetBool("IsJumping", false);
+    }
+    
     
     //Taking Damage
     public void TakeDamage(int damage)
