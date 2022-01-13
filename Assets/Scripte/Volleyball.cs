@@ -7,7 +7,7 @@ public class Volleyball : MonoBehaviour
 {
     private float ballSpeed = 20f;
     private Rigidbody2D rb2D;
-    //public int damage = 1;
+    public int damage = 1;
     //public GameObject impactEffect;
     void Start()
     {
@@ -24,14 +24,14 @@ public class Volleyball : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D otherCollider2D)
     {
-        /* TODO: enemies + enemy hp system
+        
         Enemy enemy = otherCollider2D.GetComponent<Enemy>();
         if (enemy != null)
         {
             enemy.TakeDamage(damage);
         }
-        Instantiate(impactEffect, transform.position, transform.rotation);
-        */
+        //Instantiate(impactEffect, transform.position, transform.rotation);
+        
         Destroy(gameObject);
     }
 }
