@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
@@ -6,11 +7,11 @@ using UnityEngine.Events;
 
 public class PlayerController : MonoBehaviour
 {
-    
+    /*
     [Header("Events")]
     [Space]
 
-    /*
+
     public UnityEvent OnLandEvent;
 
     [System.Serializable]
@@ -29,7 +30,9 @@ public class PlayerController : MonoBehaviour
             rb2D = GetComponent<Rigidbody2D>();
             currentHealth = maxHealth;
         } 
-        
+      private bool isInAir;
+      public float startJump_Time;   
+      
     //Movement
     private Rigidbody2D rb2D;
     public float characterSpeed = 5f;
@@ -42,7 +45,7 @@ public class PlayerController : MonoBehaviour
     private float jumpTimeCounter;
     public float jumpTime;
     private bool isJumping;
-
+    
     void Update()
     {
         //Consistent Walkspeed 
@@ -53,7 +56,9 @@ public class PlayerController : MonoBehaviour
         if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
         {
             isJumping = true;
+            isInAir = true;
             jumpTimeCounter = jumpTime;
+            startJump_Time = Time.time;
             rb2D.velocity = new Vector2( rb2D.velocity.x, jumpForce);
         }
 
@@ -81,9 +86,25 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("IsJumping", false);
         }
+
+        if (isGrounded && isInAir == true)
+        {
+            if (startJump_Time - Time.time < 0.3f)
+            {
+                animator.SetTrigger("isLanding");
+                isInAir = false;
+            }
+        }
     }
 
-    
+    /*
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(feetPosition.position,checkRadius);
+    }
+    */
+
+
     /*public void OnLanding()
     {
         animator.SetBool("IsJumping", false);

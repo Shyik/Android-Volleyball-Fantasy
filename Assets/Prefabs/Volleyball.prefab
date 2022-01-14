@@ -135,3 +135,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffd12cf01c18f6346af25561323b2298, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
+  destroyVolleyballTime: 1.5

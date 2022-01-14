@@ -8,6 +8,7 @@ public class Volleyball : MonoBehaviour
     private float ballSpeed = 20f;
     private Rigidbody2D rb2D;
     public int damage = 1;
+    public float destroyVolleyballTime = 3f;
     //public GameObject impactEffect;
     void Start()
     {
@@ -19,7 +20,7 @@ public class Volleyball : MonoBehaviour
         rb2D.velocity = new Vector2(ballSpeed, 0);
         
         //destroys volleyball after a certain amount of time if it doesnt hit anything
-        Destroy(gameObject, 10f);
+        Destroy(gameObject, destroyVolleyballTime);
     }
 
     void OnTriggerEnter2D(Collider2D otherCollider2D)
