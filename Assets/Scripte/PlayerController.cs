@@ -95,6 +95,11 @@ public class PlayerController : MonoBehaviour
                 isInAir = false;
             }
         }
+        
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            animator.SetTrigger("throwing");
+        }
     }
 
     /*

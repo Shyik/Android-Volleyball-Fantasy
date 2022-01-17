@@ -1,0 +1,4 @@
+menu, level system, game over/restart, 
+
+
+taking dmg animation, death animation, enemy death animation,

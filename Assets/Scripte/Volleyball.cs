@@ -9,7 +9,7 @@ public class Volleyball : MonoBehaviour
     private Rigidbody2D rb2D;
     public int damage = 1;
     public float destroyVolleyballTime = 3f;
-    //public GameObject impactEffect;
+    public GameObject impactEffect;
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
@@ -31,7 +31,8 @@ public class Volleyball : MonoBehaviour
         {
             enemy.TakeDamage(damage);
         }
-        //Instantiate(impactEffect, transform.position, transform.rotation);
+        
+        Instantiate(impactEffect, transform.position, transform.rotation);
         
         Destroy(gameObject);
     }
