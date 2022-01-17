@@ -1436,6 +1436,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8197083753283408135, guid: a800a3d2bea85104d8e202ba1a6ef8ea, type: 3}
   m_PrefabInstance: {fileID: 1858304674}
   m_PrefabAsset: {fileID: 0}
+--- !u!70 &1844033830 stripped
+CapsuleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 3869593671591791625, guid: 658c13e3ee45a4043bb0fd447538a500, type: 3}
+  m_PrefabInstance: {fileID: 3869593670949817945}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1858304674
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1715,6 +1720,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2174938984106206674, guid: 658c13e3ee45a4043bb0fd447538a500, type: 3}
+      propertyPath: capsuleCollider2D
+      value: 
+      objectReference: {fileID: 1844033830}
     - target: {fileID: 3672607917008408940, guid: 658c13e3ee45a4043bb0fd447538a500, type: 3}
       propertyPath: throwRate
       value: 57.41

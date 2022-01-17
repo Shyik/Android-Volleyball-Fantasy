@@ -230,6 +230,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacleDamage: 1
+  flashSpeed: 0
+  capsuleCollider2D: {fileID: 3869593671591791625}
+  spriteRenderer: {fileID: 3869593671591791624}
 --- !u!1 &5104288815684380063
 GameObject:
   m_ObjectHideFlags: 0

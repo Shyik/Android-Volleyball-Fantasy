@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     //HP
     public int maxHealth = 5;
     public int currentHealth;
+    public bool isInvulnerable = false;
    
     //Animation
         public Animator animator;
@@ -119,13 +120,19 @@ public class PlayerController : MonoBehaviour
     //Taking Damage
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage;
-        Debug.Log("current hp: "+currentHealth);
-        //play taking damage animation
-
-        if (currentHealth <= 0)
+        if (isInvulnerable == true)
         {
-            Die();
+            return;
+        }
+        if (isInvulnerable == false)
+        {
+            currentHealth -= damage;
+            Debug.Log("current hp: " + currentHealth);
+
+            if (currentHealth <= 0)
+            {
+                Die();
+            }
         }
     }
 
