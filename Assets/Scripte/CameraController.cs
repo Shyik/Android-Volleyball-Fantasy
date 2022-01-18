@@ -5,7 +5,8 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     private Rigidbody2D rb2D;
-    public float cameraSpeed = 5f;
+    public float cameraSpeed = 8f;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +16,7 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //GetComponent<PlayerController>().characterSpeed = cameraSpeed;
         rb2D.velocity = new Vector2(cameraSpeed, 0);
     }
 }

@@ -170,12 +170,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04694def2f32c154f91bfa2e7e6745b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 5
+  maxHealth: 3
   currentHealth: 0
+  isInvulnerable: 0
   animator: {fileID: 2747557481721319067}
   startJump_Time: 0
-  characterSpeed: 5
-  jumpForce: 10
+  characterSpeed: 8
+  jumpForce: 11
   isGrounded: 0
   feetPosition: {fileID: 3869593670978769528}
   checkRadius: 0.3
@@ -230,9 +231,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacleDamage: 1
-  flashSpeed: 0
-  capsuleCollider2D: {fileID: 3869593671591791625}
-  spriteRenderer: {fileID: 3869593671591791624}
 --- !u!1 &5104288815684380063
 GameObject:
   m_ObjectHideFlags: 0

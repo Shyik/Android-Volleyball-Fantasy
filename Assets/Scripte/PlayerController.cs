@@ -143,6 +143,7 @@ public class PlayerController : MonoBehaviour
         
         Destroy(gameObject);
         
+        
         //TODO: restart game/ gameover screen 
         
     }

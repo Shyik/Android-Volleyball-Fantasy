@@ -1569,7 +1569,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1600, y: 900}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
@@ -1776,18 +1776,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3869593671591791629, guid: 658c13e3ee45a4043bb0fd447538a500, type: 3}
-      propertyPath: jumpForce
-      value: 13.88
-      objectReference: {fileID: 0}
-    - target: {fileID: 3869593671591791629, guid: 658c13e3ee45a4043bb0fd447538a500, type: 3}
-      propertyPath: maxHealth
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3869593671591791629, guid: 658c13e3ee45a4043bb0fd447538a500, type: 3}
-      propertyPath: characterSpeed
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 3869593671591791638, guid: 658c13e3ee45a4043bb0fd447538a500, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1894,10 +1882,6 @@ PrefabInstance:
     - target: {fileID: 6162179716972837907, guid: 09702cc5efc73aa49a684b4ce83c556b, type: 3}
       propertyPath: m_Name
       value: Main Camera
-      objectReference: {fileID: 0}
-    - target: {fileID: 6162179716972838126, guid: 09702cc5efc73aa49a684b4ce83c556b, type: 3}
-      propertyPath: cameraSpeed
-      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6162179716972838127, guid: 09702cc5efc73aa49a684b4ce83c556b, type: 3}
       propertyPath: m_RootOrder
