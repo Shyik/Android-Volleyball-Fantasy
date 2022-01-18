@@ -322,3 +322,4 @@ Received Import Request.
   path: Assets/Assets/rock_obstacle.png
   artifactKey: Guid(89394cb06d0b3424bb3ee7e5bd77f72f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Assets/rock_obstacle.png using Guid(89394cb06d0b3424bb3ee7e5bd77f72f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'daa62c72312d74c85a59400cabaf2f9a') in 0.016096 seconds 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
