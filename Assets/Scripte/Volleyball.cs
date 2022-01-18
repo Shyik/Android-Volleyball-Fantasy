@@ -25,15 +25,16 @@ public class Volleyball : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D otherCollider2D)
     {
-        
+        Debug.Log("Collided with " + otherCollider2D.name);
         Enemy enemy = otherCollider2D.GetComponent<Enemy>();
         if (enemy != null)
         {
             enemy.TakeDamage(damage);
         }
         
-        Instantiate(impactEffect, transform.position, transform.rotation);
+        GameObject newImpacteffect = Instantiate(impactEffect, transform.position, transform.rotation);
         
         Destroy(gameObject);
+        Destroy(newImpacteffect, 0.4f);
     }
 }

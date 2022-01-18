@@ -22,15 +22,25 @@ public class PlayerController : MonoBehaviour
     public int maxHealth = 5;
     public int currentHealth;
     public bool isInvulnerable = false;
-   
+
+    public int GetCurrentHealth()
+    {
+        return currentHealth;
+    }
+
     //Animation
         public Animator animator;
         
         void Start()
         {
+            Time.timeScale = 1;
             rb2D = GetComponent<Rigidbody2D>();
             currentHealth = maxHealth;
+            
+            //Consistent Walkspeed 
+            rb2D.velocity = new Vector2(characterSpeed, rb2D.velocity.y);
         } 
+        
       private bool isInAir;
       public float startJump_Time;   
       
@@ -49,9 +59,6 @@ public class PlayerController : MonoBehaviour
     
     void Update()
     {
-        //Consistent Walkspeed 
-        rb2D.velocity = new Vector2(characterSpeed, rb2D.velocity.y);
-        
         //Jumping
         isGrounded = Physics2D.OverlapCircle(feetPosition.position,checkRadius,whatIsGround);
         if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
@@ -135,16 +142,30 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-
-    void Die()
+    
+    public void Die()
     {
+        
+        
         Debug.Log("YOU DIED");
-        //play death animation
+        animator.SetTrigger("dying");
         
-        Destroy(gameObject);
-        
-        
-        //TODO: restart game/ gameover screen 
-        
+        StartCoroutine(ExecuteAfterTime(0.2f));
+        IEnumerator ExecuteAfterTime(float time)
+        {
+            yield return new WaitForSeconds(time);
+            rb2D.velocity = new Vector2( 1f, 0);
+        }
+
+        StartCoroutine(ExecuteAfterTime2(2f));
+        IEnumerator ExecuteAfterTime2(float time)
+        {
+            yield return new WaitForSeconds(time);
+            Time.timeScale = 0;
+        }
+
+
+        FindObjectOfType<GameManager>().GameOver(); 
+
     }
 }
