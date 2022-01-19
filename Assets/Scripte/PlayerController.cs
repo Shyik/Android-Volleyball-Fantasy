@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -19,7 +18,7 @@ public class PlayerController : MonoBehaviour
     */
     
     //HP
-    public int maxHealth = 5;
+    public int maxHealth = 3;
     public int currentHealth;
     public bool isInvulnerable = false;
 

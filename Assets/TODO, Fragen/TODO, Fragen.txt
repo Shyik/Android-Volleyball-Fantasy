@@ -1,6 +1,12 @@
-menu, level system, game over/restart, 
+enemy damage, death animation,
+win condition
 
-death animation, enemy death animation,
+MANUEL:
+damage animation
+Herz Schrift/Layer
 
-
-death animation, you died, restart/ end game.!!!!
+bis Freitag:
+steine zu etwas besser erkennbarem
+damage animation besser
+Fliegende Gegner/ 2 Ebene Obstacles
+vielleicht 2tes Level

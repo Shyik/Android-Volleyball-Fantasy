@@ -11,6 +11,7 @@ public class HealthDisplay : MonoBehaviour
     
     void Update()
     {
-        healthAmount.text = "HP: " + playerController.currentHealth;
+        healthAmount.text = "" + playerController.currentHealth;
+        
     }
 }
