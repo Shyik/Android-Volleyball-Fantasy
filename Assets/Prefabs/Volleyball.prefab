@@ -99,9 +99,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.05547744, y: -0.0015410781}
   serializedVersion: 2
-  m_Radius: 0.18
+  m_Radius: 0.3453768
 --- !u!50 &3893933156363063346
 Rigidbody2D:
   serializedVersion: 4
@@ -136,5 +136,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  destroyVolleyballTime: 1.5
+  destroyVolleyballTime: 2
   impactEffect: {fileID: 808224693964720893, guid: a37d54b2e4c46e948bde77df930638a8, type: 3}
