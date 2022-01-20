@@ -2,10 +2,7 @@ enemy damage, death animation,
 
 MANUEL:
 time lerp endoflevel
-damage animation
 Herz Schrift/Layer
 
 bis Freitag:
-damage animation besser
-2 Ebene Obstacles
 vielleicht 2tes Level

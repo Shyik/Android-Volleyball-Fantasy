@@ -42,7 +42,7 @@ public class CollisionController : MonoBehaviour
         _renderer.material.color = _color;
         yield return new WaitForSeconds(0.2f);
         _color.a = 0.6f;
-        _renderer.material.color = _color;
+        _renderer.material.color = Color.red;
         GetComponent<PlayerController>().isInvulnerable = true;
         yield return new WaitForSeconds(0.2f);
         _color.a = 0.4f;
@@ -50,7 +50,7 @@ public class CollisionController : MonoBehaviour
         GetComponent<PlayerController>().isInvulnerable = true;
         yield return new WaitForSeconds(0.2f);
         _color.a = 0.6f;
-        _renderer.material.color = _color;
+        _renderer.material.color = Color.red;
         GetComponent<PlayerController>().isInvulnerable = true;
         yield return new WaitForSeconds(0.2f);
         _color.a = 0.8f;
