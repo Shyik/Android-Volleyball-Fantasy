@@ -37,4 +37,9 @@ public class GameManager : MonoBehaviour
             GameOverScreen.Setup();
         }
     }
+
+    public void CompleteLevel()
+    {
+        Debug.Log("CompleteLevel");
+    }
 }
