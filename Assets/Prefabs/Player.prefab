@@ -134,8 +134,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.006406069, y: -0.102493405}
-  m_Size: {x: 0.9103179, y: 1.7950132}
+  m_Offset: {x: 0, y: -0.15}
+  m_Size: {x: 1, y: 1.7}
   m_Direction: 0
 --- !u!50 &3869593671591791626
 Rigidbody2D:
@@ -175,15 +175,15 @@ MonoBehaviour:
   isInvulnerable: 0
   animator: {fileID: 2747557481721319067}
   startJump_Time: 0
-  characterSpeed: 8
-  jumpForce: 11
+  characterSpeed: 8.5
+  jumpForce: 17
   isGrounded: 0
   feetPosition: {fileID: 3869593670978769528}
   checkRadius: 0.3
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
-  jumpTime: 0.3
+  jumpTime: 0.25
 --- !u!95 &2747557481721319067
 Animator:
   serializedVersion: 3
@@ -217,7 +217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePosition: {fileID: 8364814004643633138}
   volleyballPrefab: {fileID: 254450036773623685, guid: 624f4849cfdb94b4dae61ebeeb0c6d48, type: 3}
-  throwRate: 2
+  throwRate: 15
 --- !u!114 &2174938984106206674
 MonoBehaviour:
   m_ObjectHideFlags: 0

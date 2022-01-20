@@ -1,12 +1,11 @@
 enemy damage, death animation,
-win condition
 
 MANUEL:
+time lerp endoflevel
 damage animation
 Herz Schrift/Layer
 
 bis Freitag:
-steine zu etwas besser erkennbarem
 damage animation besser
-Fliegende Gegner/ 2 Ebene Obstacles
+2 Ebene Obstacles
 vielleicht 2tes Level
