@@ -48,4 +48,18 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
+    public GameObject Screenflash;
+    public void OnHitScreenflash()
+    {
+        Debug.Log("OnHitScreenflash Methode wurde aufgerufen");
+        Screenflash.SetActive(true);
+        
+        StartCoroutine(ExecuteAfterTime(1f));
+        IEnumerator ExecuteAfterTime(float time)
+        {
+            Screenflash.SetActive(false);
+            yield return new WaitForSeconds(time);
+        }
+    }
 }

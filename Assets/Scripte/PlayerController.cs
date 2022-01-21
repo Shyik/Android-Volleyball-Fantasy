@@ -124,6 +124,8 @@ public class PlayerController : MonoBehaviour
     
     
     //Taking Damage
+
+    public GameManager gameManager;     
     public void TakeDamage(int damage)
     {
         if (isInvulnerable == true)
@@ -133,6 +135,7 @@ public class PlayerController : MonoBehaviour
         if (isInvulnerable == false)
         {
             currentHealth -= damage;
+            gameManager.OnHitScreenflash();
             Debug.Log("current hp: " + currentHealth);
 
             if (currentHealth <= 0)

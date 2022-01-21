@@ -1,8 +1,12 @@
-enemy damage, death animation,
-
 MANUEL:
 time lerp endoflevel
 Herz Schrift/Layer
+vignette??
 
-bis Freitag:
-vielleicht 2tes Level
+
+todo:
+vignette effect on hit
+mehr lvl?
+
+
+the art of screenshake
