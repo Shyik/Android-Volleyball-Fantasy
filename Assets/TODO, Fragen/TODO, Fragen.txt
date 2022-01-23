@@ -1,12 +1,5 @@
-MANUEL:
-time lerp endoflevel
-Herz Schrift/Layer
-vignette??
-
-
 todo:
-vignette effect on hit
 mehr lvl?
 
-
+watch:
 the art of screenshake

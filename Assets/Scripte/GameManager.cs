@@ -58,8 +58,8 @@ public class GameManager : MonoBehaviour
         StartCoroutine(ExecuteAfterTime(1f));
         IEnumerator ExecuteAfterTime(float time)
         {
-            Screenflash.SetActive(false);
             yield return new WaitForSeconds(time);
+            Screenflash.SetActive(false);
         }
     }
 }

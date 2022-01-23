@@ -11,14 +11,30 @@ public class EndOfLevelTrigger : MonoBehaviour
         if (other.gameObject.CompareTag("Player")== true)
         {
             gameManager.CompleteLevel();
-            
-            StartCoroutine(ExecuteAfterTime(6f));
+
+
+            StartCoroutine(Slowmotion(5f));
+            /*StartCoroutine(ExecuteAfterTime(6f));
             IEnumerator ExecuteAfterTime(float time)
             {
                 yield return new WaitForSeconds(time);
-                Time.timeScale = 0;
-            }
-            
+            }*/
+
         }
+        
+    }
+
+    IEnumerator Slowmotion(float timeTillPause)
+    {
+        float currentTime = timeTillPause;
+        while (currentTime > 0)
+        {
+            currentTime -= Time.deltaTime;
+            Time.timeScale = Mathf.InverseLerp(0, timeTillPause, currentTime);
+            yield return null;
+        }
+
+        Time.timeScale = 0;
+        yield break; 
     }
 }
