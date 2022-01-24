@@ -52,7 +52,6 @@ public class GameManager : MonoBehaviour
     public GameObject Screenflash;
     public void OnHitScreenflash()
     {
-        Debug.Log("OnHitScreenflash Methode wurde aufgerufen");
         Screenflash.SetActive(true);
         
         StartCoroutine(ExecuteAfterTime(1f));

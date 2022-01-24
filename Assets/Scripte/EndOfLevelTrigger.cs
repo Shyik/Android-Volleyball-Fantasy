@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class EndOfLevelTrigger : MonoBehaviour
 {
+    public float timeTillPause = 12f;
     public GameManager gameManager;
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -13,7 +14,7 @@ public class EndOfLevelTrigger : MonoBehaviour
             gameManager.CompleteLevel();
 
 
-            StartCoroutine(Slowmotion(5f));
+            StartCoroutine(Slowmotion(timeTillPause));
             /*StartCoroutine(ExecuteAfterTime(6f));
             IEnumerator ExecuteAfterTime(float time)
             {
@@ -24,12 +25,13 @@ public class EndOfLevelTrigger : MonoBehaviour
         
     }
 
+    
     IEnumerator Slowmotion(float timeTillPause)
     {
         float currentTime = timeTillPause;
         while (currentTime > 0)
         {
-            currentTime -= Time.deltaTime;
+            currentTime -= Time.unscaledDeltaTime;
             Time.timeScale = Mathf.InverseLerp(0, timeTillPause, currentTime);
             yield return null;
         }

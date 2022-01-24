@@ -20,13 +20,11 @@ public class CollisionController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Obstacle" /*|| "Enemy"*/) == true)
         {
-            Debug.Log("collided with: "+collision.name);
             GetComponent<PlayerController>().TakeDamage(obstacleDamage);
             StartCoroutine("GetInvulnerable");
         }
         if (collision.gameObject.CompareTag(/*"Obstacle" || */"Enemy") == true)
         {
-            Debug.Log("collided with: "+collision.name);
             GetComponent<PlayerController>().TakeDamage(obstacleDamage);
             StartCoroutine("GetInvulnerable");
         }

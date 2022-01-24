@@ -25,7 +25,6 @@ public class Volleyball : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D otherCollider2D)
     {
-        Debug.Log("Collided with " + otherCollider2D.name);
         Enemy enemy = otherCollider2D.GetComponent<Enemy>();
         if (enemy != null)
         {

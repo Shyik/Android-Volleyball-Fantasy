@@ -136,7 +136,6 @@ public class PlayerController : MonoBehaviour
         {
             currentHealth -= damage;
             gameManager.OnHitScreenflash();
-            Debug.Log("current hp: " + currentHealth);
 
             if (currentHealth <= 0)
             {
@@ -147,9 +146,6 @@ public class PlayerController : MonoBehaviour
     
     public void Die()
     {
-        
-        
-        Debug.Log("YOU DIED");
         animator.SetTrigger("dying");
         
         StartCoroutine(ExecuteAfterTime(0.2f));
