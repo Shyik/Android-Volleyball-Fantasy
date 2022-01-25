@@ -27,6 +27,8 @@ public class Enemy : MonoBehaviour
             animator.SetTrigger("dying");
             enemyCollider2D.enabled = false;
             
+            CinemachineShake.Instance.ShakeCamera(1f, 0.15f);
+            
             StartCoroutine(ExecuteAfterTime(0.5f));
             IEnumerator ExecuteAfterTime(float time)
             {

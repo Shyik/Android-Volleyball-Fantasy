@@ -32,6 +32,8 @@ public class Volleyball : MonoBehaviour
         }
         
         GameObject newImpacteffect = Instantiate(impactEffect, transform.position, transform.rotation);
+
+        
         
         Destroy(gameObject);
         Destroy(newImpacteffect, 0.4f);
