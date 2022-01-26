@@ -52,7 +52,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: PlayerDeath
     clip: {fileID: 8300000, guid: b69002cb16ec3fa4d9897cfde0e6a0cc, type: 3}
-    volume: 0.4
+    volume: 0.3
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -70,7 +70,13 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: LevelMusic
     clip: {fileID: 8300000, guid: e00cfb06cc00fcc4ea33a721699bc5d4, type: 3}
-    volume: 0.05
+    volume: 0.02
     pitch: 1
     loop: 1
+    source: {fileID: 0}
+  - name: LevelComplete
+    clip: {fileID: 8300000, guid: e022bff721d3225438da5fffac6551e1, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
     source: {fileID: 0}

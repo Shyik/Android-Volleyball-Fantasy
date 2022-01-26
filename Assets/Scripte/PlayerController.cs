@@ -33,18 +33,18 @@ public class PlayerController : MonoBehaviour
         void Start()
         {
             Time.timeScale = 1;
-            rb2D = GetComponent<Rigidbody2D>();
+            _rb2D = GetComponent<Rigidbody2D>();
             currentHealth = maxHealth;
             
             //Consistent Walkspeed 
-            rb2D.velocity = new Vector2(characterSpeed, rb2D.velocity.y);
+            _rb2D.velocity = new Vector2(characterSpeed, _rb2D.velocity.y);
         } 
         
-      private bool isInAir;
-      public float startJump_Time;   
+      private bool _isInAir;
+      public float startJumpTime;   
       
     //Movement
-    private Rigidbody2D rb2D;
+    private Rigidbody2D _rb2D;
     public float characterSpeed = 5f;
     
     public float jumpForce;
@@ -52,9 +52,9 @@ public class PlayerController : MonoBehaviour
     public Transform feetPosition;
     public float checkRadius;
     public LayerMask whatIsGround;
-    private float jumpTimeCounter;
+    private float _jumpTimeCounter;
     public float jumpTime;
-    private bool isJumping;
+    private bool _isJumping;
     
     void Update()
     {
@@ -62,30 +62,30 @@ public class PlayerController : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(feetPosition.position,checkRadius,whatIsGround);
         if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
         {
-            isJumping = true;
-            isInAir = true;
-            jumpTimeCounter = jumpTime;
-            startJump_Time = Time.time;
-            rb2D.velocity = new Vector2( rb2D.velocity.x, jumpForce);
+            _isJumping = true;
+            _isInAir = true;
+            _jumpTimeCounter = jumpTime;
+            startJumpTime = Time.time;
+            _rb2D.velocity = new Vector2( _rb2D.velocity.x, jumpForce);
             
             FindObjectOfType<AudioManager>().Play("Jump");
         }
 
-        if (Input.GetKey(KeyCode.Space) && isJumping == true)
+        if (Input.GetKey(KeyCode.Space) && _isJumping == true)
         {
-            if (jumpTimeCounter>0)
+            if (_jumpTimeCounter>0)
             {
-                rb2D.velocity = new Vector2( rb2D.velocity.x, jumpForce);
-                jumpTimeCounter -= Time.deltaTime;
+                _rb2D.velocity = new Vector2( _rb2D.velocity.x, jumpForce);
+                _jumpTimeCounter -= Time.deltaTime;
             }
             else
             {
-                isJumping = false;
+                _isJumping = false;
             }
         }
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            isJumping = false;
+            _isJumping = false;
         }
         
         //Animation
@@ -96,12 +96,12 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("IsJumping", false);
         }
 
-        if (isGrounded && isInAir == true)
+        if (isGrounded && _isInAir == true)
         {
-            if (startJump_Time - Time.time < 0.3f)
+            if (startJumpTime - Time.time < 0.3f)
             {
                 animator.SetTrigger("isLanding");
-                isInAir = false;
+                _isInAir = false;
             }
         }
         
@@ -148,7 +148,7 @@ public class PlayerController : MonoBehaviour
         }
     }
     
-    public void Die()
+    private void Die()
     {
         animator.SetTrigger("dying");
         
@@ -158,7 +158,7 @@ public class PlayerController : MonoBehaviour
         IEnumerator ExecuteAfterTime(float time)
         {
             yield return new WaitForSeconds(time);
-            rb2D.velocity = new Vector2( 1f, 0);
+            _rb2D.velocity = new Vector2( 1f, 0);
         }
 
         StartCoroutine(ExecuteAfterTime2(2f));

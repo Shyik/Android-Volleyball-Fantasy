@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class EndOfLevelTrigger : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class EndOfLevelTrigger : MonoBehaviour
             gameManager.CompleteLevel();
 
 
+            FindObjectOfType<AudioManager>().Play("LevelComplete");
+            
             StartCoroutine(Slowmotion(timeTillPause));
             /*StartCoroutine(ExecuteAfterTime(6f));
             IEnumerator ExecuteAfterTime(float time)
