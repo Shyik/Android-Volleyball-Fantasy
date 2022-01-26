@@ -46,13 +46,13 @@ MonoBehaviour:
   sounds:
   - name: EnemyExplosion
     clip: {fileID: 8300000, guid: 51b1b6a6143e72c48a51d0783d3530f7, type: 3}
-    volume: 0.2
+    volume: 0.01
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: PlayerDeath
     clip: {fileID: 8300000, guid: b69002cb16ec3fa4d9897cfde0e6a0cc, type: 3}
-    volume: 0.3
+    volume: 0.15
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -64,7 +64,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Jump
     clip: {fileID: 8300000, guid: c13c8c84820d59542b59d35b425a5b4d, type: 3}
-    volume: 0.4
+    volume: 0.15
     pitch: 1
     loop: 0
     source: {fileID: 0}

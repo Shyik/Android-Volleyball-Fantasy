@@ -18,6 +18,11 @@ public class GameManager : MonoBehaviour
         Application.Quit();
     }
 
+    public void LoadIntro()
+    {
+        SceneManager.LoadScene("test intro");
+    }
+
     public bool gameHasEnded = false;
 
     public void RestartGame()
@@ -48,6 +53,7 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
 
     public GameObject Screenflash;
     public void OnHitScreenflash()
