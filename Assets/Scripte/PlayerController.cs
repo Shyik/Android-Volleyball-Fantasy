@@ -67,6 +67,8 @@ public class PlayerController : MonoBehaviour
             jumpTimeCounter = jumpTime;
             startJump_Time = Time.time;
             rb2D.velocity = new Vector2( rb2D.velocity.x, jumpForce);
+            
+            FindObjectOfType<AudioManager>().Play("Jump");
         }
 
         if (Input.GetKey(KeyCode.Space) && isJumping == true)
@@ -135,6 +137,8 @@ public class PlayerController : MonoBehaviour
         if (isInvulnerable == false)
         {
             currentHealth -= damage;
+            
+            FindObjectOfType<AudioManager>().Play("PlayerTakeDamage");
             gameManager.OnHitScreenflash();
 
             if (currentHealth <= 0)
@@ -147,6 +151,8 @@ public class PlayerController : MonoBehaviour
     public void Die()
     {
         animator.SetTrigger("dying");
+        
+        FindObjectOfType<AudioManager>().Play("PlayerDeath");
         
         StartCoroutine(ExecuteAfterTime(0.2f));
         IEnumerator ExecuteAfterTime(float time)

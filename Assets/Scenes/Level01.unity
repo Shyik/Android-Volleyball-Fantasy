@@ -667,7 +667,7 @@ Transform:
   - {fileID: 1579575424}
   - {fileID: 1918706814}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &187080631 stripped
 Transform:
@@ -1121,7 +1121,7 @@ PrefabInstance:
       objectReference: {fileID: 1429288272}
     - target: {fileID: 9153541664067435882, guid: 18e769edf29713547ac97e4e0f1ba403, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 9153541664067435882, guid: 18e769edf29713547ac97e4e0f1ba403, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1253,7 +1253,7 @@ Transform:
   - {fileID: 446310408}
   - {fileID: 2130418766}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &438857069 stripped
 Transform:
@@ -3469,7 +3469,7 @@ Transform:
   - {fileID: 1664173182}
   - {fileID: 1430634887}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1270387522
 PrefabInstance:
@@ -4789,7 +4789,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3085191600184867630, guid: 79e3766c6d61b6f48a1b9598097ee891, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3085191600184867630, guid: 79e3766c6d61b6f48a1b9598097ee891, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5673,6 +5673,70 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abd7dbfb4101f354dbc7b46e0b34ac6c, type: 3}
+--- !u!1 &1918125859
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1918125861}
+  - component: {fileID: 1918125860}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1918125860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918125859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c70f8e567e9b6d45981a5bb52652d7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: EnemyExplosion
+    clip: {fileID: 8300000, guid: 51b1b6a6143e72c48a51d0783d3530f7, type: 3}
+    volume: 0.2
+    pitch: 1
+    source: {fileID: 0}
+  - name: PlayerDeath
+    clip: {fileID: 8300000, guid: b69002cb16ec3fa4d9897cfde0e6a0cc, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+  - name: PlayerTakeDamage
+    clip: {fileID: 8300000, guid: 838978ba6eff7364ea8bffd653524afb, type: 3}
+    volume: 0.6
+    pitch: 1.7
+    source: {fileID: 0}
+  - name: Jump
+    clip: {fileID: 8300000, guid: c13c8c84820d59542b59d35b425a5b4d, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+--- !u!4 &1918125861
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918125859}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1918706813
 GameObject:
   m_ObjectHideFlags: 0
@@ -5844,7 +5908,7 @@ Transform:
   - {fileID: 66179401}
   - {fileID: 1489045653}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2011618886 stripped
 Transform:
@@ -6551,7 +6615,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3869593671591791627, guid: 658c13e3ee45a4043bb0fd447538a500, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3869593671591791627, guid: 658c13e3ee45a4043bb0fd447538a500, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6856,7 +6920,7 @@ PrefabInstance:
       objectReference: {fileID: 709116500}
     - target: {fileID: 6162179716972838127, guid: 09702cc5efc73aa49a684b4ce83c556b, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6162179716972838127, guid: 09702cc5efc73aa49a684b4ce83c556b, type: 3}
       propertyPath: m_LocalPosition.x

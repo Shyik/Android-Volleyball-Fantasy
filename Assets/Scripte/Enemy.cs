@@ -9,8 +9,6 @@ public class Enemy : MonoBehaviour
     public Animator animator;
     public Collider2D enemyCollider2D;
     public int health = 1;
-    
-    //public GameObejct deathEffect;
 
     public void TakeDamage(int damage)
     {
@@ -27,6 +25,8 @@ public class Enemy : MonoBehaviour
             animator.SetTrigger("dying");
             enemyCollider2D.enabled = false;
             
+            FindObjectOfType<AudioManager>().Play("EnemyExplosion");
+            
             CinemachineShake.Instance.ShakeCamera(1f, 0.15f);
             
             StartCoroutine(ExecuteAfterTime(0.5f));
@@ -36,6 +36,5 @@ public class Enemy : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        //Instantiate(deathEffect, transform.position, Quaternion.identity);
     }
 }
