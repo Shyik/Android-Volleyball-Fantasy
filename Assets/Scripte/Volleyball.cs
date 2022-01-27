@@ -25,7 +25,7 @@ public class Volleyball : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D otherCollider2D)
     {
-        Enemy enemy = otherCollider2D.GetComponent<Enemy>();
+        EnemyController enemy = otherCollider2D.GetComponent<EnemyController>();
         if (enemy != null)
         {
             enemy.TakeDamage(damage);
