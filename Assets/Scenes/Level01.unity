@@ -6978,6 +6978,14 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 709116500}
+    - target: {fileID: 7816386703965241810, guid: c020cd2a88e0f3a4f88485a68d0e3dfe, type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7816386703965241823, guid: c020cd2a88e0f3a4f88485a68d0e3dfe, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8213267470185948845, guid: c020cd2a88e0f3a4f88485a68d0e3dfe, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

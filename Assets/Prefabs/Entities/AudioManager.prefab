@@ -64,7 +64,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Jump
     clip: {fileID: 8300000, guid: c13c8c84820d59542b59d35b425a5b4d, type: 3}
-    volume: 0.15
+    volume: 0.1
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -76,7 +76,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: LevelComplete
     clip: {fileID: 8300000, guid: e022bff721d3225438da5fffac6551e1, type: 3}
-    volume: 0.3
+    volume: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
